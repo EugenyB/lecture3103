@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.MainController">
+   <center>
+       <AnchorPane prefHeight="400.0" prefWidth="600.0">
+           <TextArea layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="574.0" AnchorPane.leftAnchor="14.0"
+                     AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0"/>
+           <Button layoutX="14.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="571.0"
+                   text="Button" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0"
+                   AnchorPane.topAnchor="222.0"/>
+           <Pane fx:id="pane" layoutX="14.0" layoutY="255.0" prefHeight="192.0" prefWidth="573.0" AnchorPane.bottomAnchor="14.0"
+                 AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="250.0">
+               <Canvas fx:id="canvas" height="200.0" width="200.0"/>
+           </Pane>
+       </AnchorPane>
+   </center>
+   <top>
+       <VBox prefHeight="63.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <MenuBar>
+               <Menu mnemonicParsing="false" text="File">
+                   <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Edit">
+                   <MenuItem mnemonicParsing="false" text="Delete" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Help">
+                   <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+               </Menu>
+           </MenuBar>
+           <ToolBar prefHeight="40.0" prefWidth="200.0">
+               <Button mnemonicParsing="false" onAction="#draw" text="Draw" />
+            <TextField fx:id="textField" prefHeight="25.0" prefWidth="175.0" />
+            <Button mnemonicParsing="false" onAction="#hello" text="Say hello" />
+           </ToolBar>
+       </VBox>
+   </top>
+</BorderPane>
